@@ -8,10 +8,10 @@ public class Main {
         System.out.println("\nЗадание 1: Создать переменные всех пройденных типов данных, и инициализировать их значения.");
         variables();
         System.out.print(expression(4,6,7,10));
-        System.out.print(task3(10, 15));
-        task4();
+        System.out.print(task3(15, 2));
+        task4(0);
         System.out.print(task5(-1));
-        System.out.print(task6("Привет, "));
+        task6();
         task7();
 
 
@@ -50,7 +50,7 @@ public class Main {
 
     public static boolean task3(int age1, int age2){
         System.out.println("\n" + "\n" + "Задание 3: Написать метод, принимающий на вход два числа, и проверяющий что их сумма лежит \nв пределах от 10 до 20(включительно), если да – вернуть true, в противном случае – false; ");
-        System.out.print("\nОтвет: ");
+        System.out.print("\nСумма чисел = " + (age1 + age2) + " результат: ");
         if (age1 + age2 > 10 && age1 + age2 < 20 ) {
             return true;
 
@@ -59,21 +59,14 @@ public class Main {
         }
     }
 
-    public static void task4 () {
+    public static void task4 (int ch) {
         System.out.println("\n" + "\n" + "Задание 4: Написать метод, которому в качестве параметра передается целое число, метод должен \nнапечатать в консоль положительное ли число передали, или отрицательное; Замечание: ноль считаем положительным числом.");
-        System.out.print("\nВведите первое число: ");
-        Scanner scanner1 = new Scanner(System.in);
-        int ch1 = scanner1.nextInt();
-        System.out.print("Введите второе число: ");
-        Scanner scanner2 = new Scanner(System.in);
-        int ch2 = scanner2.nextInt();
-        int x = ch1 + ch2;
 
-        if (x > 0) {
-            System.out.print("\nРезультат: " + x + " - положительное число");
+        if (ch >= 0) {
+            System.out.print("\nРезультат: " + ch + " - положительное число");
 
         } else {
-            System.out.print("\nРезультат: " + x + " - отрицательное число");
+            System.out.print("\nРезультат: " + ch + " - отрицательное число");
 
         }
     }
@@ -92,12 +85,10 @@ public class Main {
         }
     }
 
-    public static String task6 (String name) {
+    public static void task6 () {
         System.out.println("\n" + "\nЗадение 6: Написать метод, которому в качестве параметра передается строка, обозначающая имя, метод\nдолжен вывести в консоль сообщение «Привет, указанное_имя!»");
-        System.out.print("\nВведите имя: ");
-        Scanner scanner = new Scanner(System.in);
-        String n = scanner.nextLine();
-        return (name + n + "!");
+        String name = "Vlad";
+        System.out.print("\nПривет, " + name + "!");
 
     }
 
